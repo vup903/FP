@@ -56,7 +56,10 @@ public:
     //----
     void initMaze()
     {      
-        int colum = 0; int row = 0;      
+        int colum = 0; int row = 0;
+        wallTexture.loadFromFile("/Users/lbjessie/Desktop/磚牆素材.png", sf::IntRect(0, 0, 400, 400));
+        sf::RectangleShape wallShape(sf::Vector2f (55, 55));
+        wallShape.setTexture(&wallTexture);
         for (int i = 0; i < (Maze::mazeW*Maze::mazeH) ; i++)
         {              
             if (colum >= Maze::mazeW)
@@ -68,7 +71,7 @@ public:
             mazeGrid[colum][row] = str;         
             if (str == "#")
             {
-                wallShapeArr[wallShapeCount] = getWallShape(colum,row);
+                wallShapeArr[wallShapeCount] = getWallShape(colum,row,wallShape);
                 wallShapeCount++;
             }
             else
@@ -113,6 +116,7 @@ private:
     sf::RectangleShape wallShapeArr[23*24];    
     static int mazeW, mazeH;
     int wallShapeCount = 0;
+    sf::Texture wallTexture;
 
     //---
     bool isDot(string str)
@@ -124,16 +128,14 @@ private:
                str != "1" && str != "-" && str!="c";
     }
 
+    //wallShape.setTexture(&wallTexture);
     //---
-    RectangleShape getWallShape(int col,int row)
+
+    RectangleShape getWallShape(int col,int row,sf::RectangleShape wallShape)
     {
-        RectangleShape rectangle;
-        rectangle.setSize(sf::Vector2f(55, 55));// 30 28
-        rectangle.setFillColor(Color::Blue);
-        //rectangle.setOutlineColor(sf::Color::Blue);
-        //rectangle.setOutlineThickness(.5);
-        rectangle.setPosition(col*55, row*55);
-        return rectangle;
+        cout << col;
+        wallShape.setPosition(col*55, row*55);
+        return wallShape;
     }     
 
     //---
