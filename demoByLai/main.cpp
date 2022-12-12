@@ -32,24 +32,27 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
-        /*如果要看迷宮，就用這段程式碼
+        //如果要看迷宮，就用這段程式碼
+        /*
         maze.drawWall(&window);
          */
 
-        /*如果要看幽靈，就用這段程式碼，可以跟迷宮一起看
+
+        //如果要看幽靈，就用這段程式碼，可以跟迷宮一起看
+        /*
         que.drawGhost(&window);
         ann.drawGhost(&window);
         hua.drawGhost(&window);
         chi.drawGhost(&window);
          */
 
-        /*如果要看首頁，就用這段程式碼，不能跟迷宮和幽靈一起看，會重疊，到時候應該要寫按鈕事件切換
+        //如果要看首頁，就用這段程式碼，不能跟迷宮和幽靈一起看，會重疊，到時候應該要寫按鈕事件切換
+        /*
         menu.drawMenu(&window);
         startGame.drawButton(&window);
         gameRule.drawButton(&window);
          */
         window.display();
     }
-
     return 0;
 }
