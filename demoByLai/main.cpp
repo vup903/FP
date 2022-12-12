@@ -48,6 +48,8 @@ int main()
             if (event.type == sf::Event::Closed)
                 window.close();
         }
+        
+        //查看不同畫面，應該要用按鈕事件之類的串接，所以我只能先暫時這樣demo，想要看哪個畫面就把該段註解拿掉
         //看遊戲畫面
         /*
         maze.drawWall(&window);
@@ -67,10 +69,10 @@ int main()
          */
 
         //看勝利畫面
-
+        /*
         winImage.drawbg(&window);
         reStart.drawButton(&window);
-
+         */
 
         //看失敗畫面
         /*
