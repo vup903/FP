@@ -1,1 +1,1 @@
-只要照著我的程式碼就可以看demo了，但要記得去imageByLai下載圖檔
+裝完sfml套件，去image下載圖檔之後，改CMakeList.txt，只要照著我的程式碼就可以看demo了
