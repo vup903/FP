@@ -44,9 +44,9 @@ int main()
          */
 
         /*如果要看首頁，就用這段程式碼，不能跟迷宮和幽靈一起看，會重疊，到時候應該要寫按鈕事件切換
+        menu.drawMenu(&window);
         startGame.drawButton(&window);
         gameRule.drawButton(&window);
-        menu.drawMenu(&window);
          */
         window.display();
     }
