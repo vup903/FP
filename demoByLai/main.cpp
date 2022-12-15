@@ -12,6 +12,7 @@ using namespace std;
 sf::RenderWindow window(sf::VideoMode(1890, 1417), "PAC MAN IN IMPERIAL HAREN", sf::Style::Close);
 sf::Event event;
 sf::Keyboard keyboard;
+sf::Mouse mouse;
 
 /*宣告的部分*/
 /*fileName放圖檔的絕對路徑*/
@@ -82,25 +83,26 @@ int main()
             if (event.type == event.Closed)
                 window.close();
 
+            if (mouse.isButtonPressed(mouse.Left) and mouse.getPosition(window).x >= 400 and mouse.getPosition(window).y >= 900 and mouse.getPosition(window).x <= 800 and mouse.getPosition(window).y <= 1050 and type == 1)
+            {
+                type = 2;
+            }
+            else if (mouse.isButtonPressed(mouse.Left) and mouse.getPosition(window).x >= 1350 and mouse.getPosition(window).y >= 1200 and mouse.getPosition(window).x <= 1750 and mouse.getPosition(window).y <= 1350 and (type == 3 or type == 4))
+            {
+                type = 1;
+            }
+
             if (event.type == event.KeyPressed)
             {
-                if (event.key.code == keyboard.Escape)
+                if (event.key.code == keyboard.Escape) // 按ESC離開遊戲
                 {
                     window.close();
                 }
-                if (event.key.code == keyboard.A) // 會加上type == 3 or 4的條件
-                {
-                    type = 1;
-                }
-                if (event.key.code == keyboard.S) // 會加上type == 1的條件
-                {
-                    type = 2;
-                }
-                if (event.key.code == keyboard.D) // 條件應改為經驗值>=100
+                else if (event.key.code == keyboard.D) // 條件應改為經驗值>=100
                 {
                     type = 3;
                 }
-                if (event.key.code == keyboard.F) // 條件應改為經驗值<=0
+                else if (event.key.code == keyboard.F) // 條件應改為經驗值<=0
                 {
                     type = 4;
                 }
