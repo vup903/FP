@@ -9,77 +9,103 @@
 
 using namespace std;
 
-int main()
+sf::RenderWindow window(sf::VideoMode(1890, 1417), "PAC MAN IN IMPERIAL HAREN", sf::Style::Close);
+sf::Event event;
+sf::Keyboard keyboard;
+
+/*宣告的部分*/
+/*fileName放圖檔的絕對路徑*/
+
+// 地圖宣告
+Maze maze("demo/Image/image/wall.png");
+Ghost que("demo/Image/image/que.png", 55, 55);
+Ghost ann("demo/Image/image/ann.png", 1155, 1265);
+Ghost hua("demo/Image/image/hua.png", 1155, 55);
+Ghost chi("demo/Image/image/chi.png", 55, 1265);
+Pac pac("demo/Image/image/pac.png", 605, 605);
+
+// 首頁宣告
+Background menuImage("demo/Image/image/mainpage.png");
+Button startGame("demo/Image/image/startGame.png", 400, 900);
+Button gameRule("demo/Image/image/gameRule.png", 1100, 900);
+
+// 勝利畫面
+Background winImage("demo/Image/image/win.png");
+Button reStart("demo/Image/image/restart.png", 1350, 1200);
+
+// 失敗畫面
+Background loseImage("demo/Image/image/lose.png");
+// Button reStart("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/重新開始.png", 1350, 1200);
+
+ScoreBoard scoreBoard;
+
+void SwitchUI(int num, int type) // 切換UI： 1, 2, 3, 4, 分別代表menu, playing, win, lose
 {
-    sf::RenderWindow window(sf::VideoMode(1890, 1417), "PAC MAN IN IMPERIAL HAREN", sf::Style::Close);
-    sf::Event event;
-
-    /*宣告的部分*/
-    /*fileName放圖檔的絕對路徑*/
-
-    //地圖宣告
-    Maze maze("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/磚牆素材.png");
-    Ghost que("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/皇后方形.png", 55, 55);
-    Ghost ann("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/安陵容方形.png", 1155, 1265);
-    Ghost hua("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/華妃方形.png", 1155, 55);
-    Ghost chi("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/齊妃方形.png", 55, 1265);
-    Pac pac("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/甄嬛方形.png", 605, 605);
-
-    //首頁宣告
-    Background menuImage("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/首頁.png");
-    Button startGame("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/startGame.png", 400, 900);
-    Button gameRule("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/gameRule.png", 1100, 900);
-
-    //勝利畫面
-    Background winImage("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/勝利畫面.png");
-    Button reStart("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/重新開始.png", 1350, 1200);
-
-    //失敗畫面
-    Background loseImage("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/失敗畫面.png");
-    //Button reStart("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/重新開始.png", 1350, 1200);
-
-    ScoreBoard scoreBoard;
-    float i = 0;
-    while (window.isOpen())
+    switch (type)
     {
-        window.clear(sf::Color::Black);
-        while (window.pollEvent(event))
-        {
-            if (event.type == sf::Event::Closed)
-                window.close();
-        }
-        
-        //查看不同畫面，應該要用按鈕事件之類的串接，所以我只能先暫時這樣demo，想要看哪個畫面就把該段註解拿掉
-        //看遊戲畫面
-        /*
+    case 1:
+        menuImage.drawbg(&window);
+        startGame.drawButton(&window);
+        gameRule.drawButton(&window);
+        break;
+    case 2:
         maze.drawWall(&window);
         que.drawGhost(&window);
         ann.drawGhost(&window);
         hua.drawGhost(&window);
         chi.drawGhost(&window);
         pac.drawPac(&window);
-        scoreBoard.drawScoreBoard(i, &window);
-         */
-
-        //看首頁
-        /*
-        menuImage.drawbg(&window);
-        startGame.drawButton(&window);
-        gameRule.drawButton(&window);
-         */
-
-        //看勝利畫面
-        /*
+        scoreBoard.drawScoreBoard(num, &window);
+        break;
+    case 3:
         winImage.drawbg(&window);
         reStart.drawButton(&window);
-         */
-
-        //看失敗畫面
-        /*
+        break;
+    case 4:
         loseImage.drawbg(&window);
         reStart.drawButton(&window);
-         */
+        break;
+    }
+}
 
+int main()
+{
+
+    float exp = 50;
+    int type = 1;
+    while (window.isOpen())
+    {
+        window.clear(sf::Color::Black);
+        SwitchUI(exp, type);
+        while (window.pollEvent(event))
+        {
+            if (event.type == event.Closed)
+                window.close();
+
+            if (event.type == event.KeyPressed)
+            {
+                if (event.key.code == keyboard.Escape)
+                {
+                    window.close();
+                }
+                if (event.key.code == keyboard.A) // 會加上type == 3 or 4的條件
+                {
+                    type = 1;
+                }
+                if (event.key.code == keyboard.S) // 會加上type == 1的條件
+                {
+                    type = 2;
+                }
+                if (event.key.code == keyboard.D) // 條件應改為經驗值>=100
+                {
+                    type = 3;
+                }
+                if (event.key.code == keyboard.F) // 條件應改為經驗值<=0
+                {
+                    type = 4;
+                }
+            }
+        }
         window.display();
     }
     return 0;
