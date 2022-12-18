@@ -1,0 +1,9 @@
+如果想要玩遊戲的話:
+直接打開game.exe即可
+
+如果想要Debug的話(for VScode):
+在open folder選取FP-main資料夾
+在terminal依序輸入以下指令(一次一行)
+g++ -IC:\SFML-2.5.1\include -c main.cpp Pacman.cpp MapCollision.cpp GhostManager.cpp Ghost.cpp DrawText.cpp ConvertSketch.cpp DrawMap.cpp
+g++ -LC:\SFML-2.5.1\lib .\main.o .\Pacman.o .\MapCollision.o .\GhostManager.o .\Ghost.o .\DrawText.o .\ConvertSketch.o .\DrawMap.o -o game.exe -lmingw32 -lsfml-graphics -lsfml-window -lsfml-system -lsfml-main -mwindows
+.\game.exe
