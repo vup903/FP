@@ -15,7 +15,7 @@ Pacman::Pacman()
     position.x = 0;
     position.y = 0;
     //路徑要調
-    pacTexture.loadFromFile("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/甄嬛方形.png");
+    pacTexture.loadFromFile("Resources/image/甄嬛方形.png");
     pacSpr.setTexture(pacTexture);
     //setScale可能要多試幾次 不同電腦的視窗大小好像會不一樣 但用這個函數畫質應該不會降低
     pacSpr.setScale(sf::Vector2f(0.1, 0.1));
