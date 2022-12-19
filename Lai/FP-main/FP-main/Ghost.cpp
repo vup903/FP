@@ -14,25 +14,25 @@ Ghost::Ghost(unsigned char i_id): id(i_id)
         case 0:
         {
             // Red color
-            ghostTexture.loadFromFile("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/齊妃方形.png");
+            ghostTexture.loadFromFile("Resources/image/齊妃方形.png");
             break;
         }
         case 1:
         {
             // Pink color
-            ghostTexture.loadFromFile("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/安陵容方形.png");
+            ghostTexture.loadFromFile("Resources/image/安陵容方形.png");
             break;
         }
         case 2:
         {
             // Cyan color (I still don't understand why they called it blue)
-            ghostTexture.loadFromFile( "/Users/lbjessie/Desktop/大三上/程式設計/demo/image/皇后方形.png");
+            ghostTexture.loadFromFile( "Resources/image/皇后方形.png");
             break;
         }
         case 3:
         {
             // Orange color
-            ghostTexture.loadFromFile("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/華妃方形.png");
+            ghostTexture.loadFromFile("Resources/image/華妃方形.png");
         }
     }
     ghostSpr.setTexture(ghostTexture);
