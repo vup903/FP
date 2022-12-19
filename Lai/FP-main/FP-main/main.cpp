@@ -19,17 +19,16 @@ sf::Keyboard keyboard;
 sf::Mouse mouse; //336*352
 sf::RenderWindow window(sf::VideoMode(CELL_SIZE * MAP_WIDTH * SCREEN_RESIZE, (FONT_HEIGHT + CELL_SIZE * MAP_HEIGHT) * SCREEN_RESIZE), "Pac-Man", sf::Style::Close);
 // 首頁宣告
-Background menuImage("/Users/lbjessie/Downloads/FP-main/FP-main/Resources/Images/mainpage.png");
-Button startGame("/Users/lbjessie/Downloads/FP-main/FP-main/Resources/Images/startGame.png", 36, 230);
-Button gameRule("/Users/lbjessie/Downloads/FP-main/FP-main/Resources/Images/gameRule.png", 200, 230);
+Background menuImage("Resources/Images/mainpage.png");
+Button startGame("Resources/Images/startGame.png", 36, 230);
+Button gameRule("Resources/Images/gameRule.png", 200, 230);
 
 // 勝利畫面
-Background winImage("/Users/lbjessie/Downloads/FP-main/FP-main/Resources/Images/win.png");
-Button reStart("/Users/lbjessie/Downloads/FP-main/FP-main/Resources/Images/restart.png", 200, 300);
+Background winImage("Resources/Images/win.png");
+Button reStart("Resources/Images/restart.png", 200, 300);
 
 // 失敗畫面
-Background loseImage("/Users/lbjessie/Downloads/FP-main/FP-main/Resources/Images/lose.png");
-// Button reStart("/Users/lbjessie/Desktop/大三上/程式設計/demo/image/重新開始.png", 1350, 1200);
+Background loseImage("Resources/Images/lose.png");
 
 ScoreBoard scoreBoard;
 
