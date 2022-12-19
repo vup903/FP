@@ -1,0 +1,190 @@
+## This file contains all the build statements describing the
+# compilation DAG.
+
+# =============================================================================
+# Write statements declared in CMakeLists.txt:
+# 
+# Which is the root file.
+# =============================================================================
+
+# =============================================================================
+# Project: FP_main
+# Configurations: Debug
+# =============================================================================
+
+#############################################
+# Minimal version of Ninja required by this file
+
+ninja_required_version = 1.5
+
+
+#############################################
+# Set configuration variable for custom commands.
+
+CONFIGURATION = Debug
+# =============================================================================
+# Include auxiliary files.
+
+
+#############################################
+# Include rules file.
+
+include CMakeFiles/rules.ninja
+
+# =============================================================================
+
+#############################################
+# Logical path to working directory; prefix for absolute paths.
+
+cmake_ninja_workdir = /Users/lbjessie/Downloads/FP-main/cmake-build-debug/
+# =============================================================================
+# Object build statements for EXECUTABLE target FP_main
+
+
+#############################################
+# Order-only phony target for FP_main
+
+build cmake_object_order_depends_target_FP_main: phony || CMakeFiles/FP_main.dir
+
+build CMakeFiles/FP_main.dir/FP-main/ConvertSketch.cpp.o: CXX_COMPILER__FP_main_Debug /Users/lbjessie/Downloads/FP-main/FP-main/ConvertSketch.cpp || cmake_object_order_depends_target_FP_main
+  DEP_FILE = CMakeFiles/FP_main.dir/FP-main/ConvertSketch.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7
+  INCLUDES = -I/Users/lbjessie/Downloads/FP-main/FP-main/Headers -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/FP_main.dir
+  OBJECT_FILE_DIR = CMakeFiles/FP_main.dir/FP-main
+
+build CMakeFiles/FP_main.dir/FP-main/DrawMap.cpp.o: CXX_COMPILER__FP_main_Debug /Users/lbjessie/Downloads/FP-main/FP-main/DrawMap.cpp || cmake_object_order_depends_target_FP_main
+  DEP_FILE = CMakeFiles/FP_main.dir/FP-main/DrawMap.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7
+  INCLUDES = -I/Users/lbjessie/Downloads/FP-main/FP-main/Headers -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/FP_main.dir
+  OBJECT_FILE_DIR = CMakeFiles/FP_main.dir/FP-main
+
+build CMakeFiles/FP_main.dir/FP-main/DrawText.cpp.o: CXX_COMPILER__FP_main_Debug /Users/lbjessie/Downloads/FP-main/FP-main/DrawText.cpp || cmake_object_order_depends_target_FP_main
+  DEP_FILE = CMakeFiles/FP_main.dir/FP-main/DrawText.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7
+  INCLUDES = -I/Users/lbjessie/Downloads/FP-main/FP-main/Headers -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/FP_main.dir
+  OBJECT_FILE_DIR = CMakeFiles/FP_main.dir/FP-main
+
+build CMakeFiles/FP_main.dir/FP-main/Ghost.cpp.o: CXX_COMPILER__FP_main_Debug /Users/lbjessie/Downloads/FP-main/FP-main/Ghost.cpp || cmake_object_order_depends_target_FP_main
+  DEP_FILE = CMakeFiles/FP_main.dir/FP-main/Ghost.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7
+  INCLUDES = -I/Users/lbjessie/Downloads/FP-main/FP-main/Headers -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/FP_main.dir
+  OBJECT_FILE_DIR = CMakeFiles/FP_main.dir/FP-main
+
+build CMakeFiles/FP_main.dir/FP-main/GhostManager.cpp.o: CXX_COMPILER__FP_main_Debug /Users/lbjessie/Downloads/FP-main/FP-main/GhostManager.cpp || cmake_object_order_depends_target_FP_main
+  DEP_FILE = CMakeFiles/FP_main.dir/FP-main/GhostManager.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7
+  INCLUDES = -I/Users/lbjessie/Downloads/FP-main/FP-main/Headers -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/FP_main.dir
+  OBJECT_FILE_DIR = CMakeFiles/FP_main.dir/FP-main
+
+build CMakeFiles/FP_main.dir/FP-main/main.cpp.o: CXX_COMPILER__FP_main_Debug /Users/lbjessie/Downloads/FP-main/FP-main/main.cpp || cmake_object_order_depends_target_FP_main
+  DEP_FILE = CMakeFiles/FP_main.dir/FP-main/main.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7
+  INCLUDES = -I/Users/lbjessie/Downloads/FP-main/FP-main/Headers -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/FP_main.dir
+  OBJECT_FILE_DIR = CMakeFiles/FP_main.dir/FP-main
+
+build CMakeFiles/FP_main.dir/FP-main/MapCollision.cpp.o: CXX_COMPILER__FP_main_Debug /Users/lbjessie/Downloads/FP-main/FP-main/MapCollision.cpp || cmake_object_order_depends_target_FP_main
+  DEP_FILE = CMakeFiles/FP_main.dir/FP-main/MapCollision.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7
+  INCLUDES = -I/Users/lbjessie/Downloads/FP-main/FP-main/Headers -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/FP_main.dir
+  OBJECT_FILE_DIR = CMakeFiles/FP_main.dir/FP-main
+
+build CMakeFiles/FP_main.dir/FP-main/Pacman.cpp.o: CXX_COMPILER__FP_main_Debug /Users/lbjessie/Downloads/FP-main/FP-main/Pacman.cpp || cmake_object_order_depends_target_FP_main
+  DEP_FILE = CMakeFiles/FP_main.dir/FP-main/Pacman.cpp.o.d
+  FLAGS = -std=c++11 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7
+  INCLUDES = -I/Users/lbjessie/Downloads/FP-main/FP-main/Headers -isystem /usr/local/include
+  OBJECT_DIR = CMakeFiles/FP_main.dir
+  OBJECT_FILE_DIR = CMakeFiles/FP_main.dir/FP-main
+
+
+# =============================================================================
+# Link build statements for EXECUTABLE target FP_main
+
+
+#############################################
+# Link the executable FP_main
+
+build FP_main: CXX_EXECUTABLE_LINKER__FP_main_Debug CMakeFiles/FP_main.dir/FP-main/ConvertSketch.cpp.o CMakeFiles/FP_main.dir/FP-main/DrawMap.cpp.o CMakeFiles/FP_main.dir/FP-main/DrawText.cpp.o CMakeFiles/FP_main.dir/FP-main/Ghost.cpp.o CMakeFiles/FP_main.dir/FP-main/GhostManager.cpp.o CMakeFiles/FP_main.dir/FP-main/main.cpp.o CMakeFiles/FP_main.dir/FP-main/MapCollision.cpp.o CMakeFiles/FP_main.dir/FP-main/Pacman.cpp.o | /usr/local/lib/libsfml-graphics.2.5.1.dylib /usr/local/lib/libsfml-audio.2.5.1.dylib /usr/local/lib/libsfml-network.2.5.1.dylib /usr/local/lib/libsfml-window.2.5.1.dylib /usr/local/lib/libsfml-system.2.5.1.dylib
+  FLAGS = -std=c++11 -g -isysroot /Library/Developer/CommandLineTools/SDKs/MacOSX12.1.sdk -mmacosx-version-min=11.7
+  LINK_LIBRARIES = -Wl,-rpath,/usr/local/lib  /usr/local/lib/libsfml-graphics.2.5.1.dylib  /usr/local/lib/libsfml-audio.2.5.1.dylib  /usr/local/lib/libsfml-network.2.5.1.dylib  /usr/local/lib/libsfml-window.2.5.1.dylib  /usr/local/lib/libsfml-system.2.5.1.dylib
+  OBJECT_DIR = CMakeFiles/FP_main.dir
+  POST_BUILD = :
+  PRE_LINK = :
+  TARGET_FILE = FP_main
+  TARGET_PDB = FP_main.dbg
+
+
+#############################################
+# Utility command for edit_cache
+
+build CMakeFiles/edit_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/lbjessie/Downloads/FP-main/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+  DESC = No interactive CMake dialog available...
+  restat = 1
+
+build edit_cache: phony CMakeFiles/edit_cache.util
+
+
+#############################################
+# Utility command for rebuild_cache
+
+build CMakeFiles/rebuild_cache.util: CUSTOM_COMMAND
+  COMMAND = cd /Users/lbjessie/Downloads/FP-main/cmake-build-debug && /Applications/CLion.app/Contents/bin/cmake/mac/bin/cmake --regenerate-during-build -S/Users/lbjessie/Downloads/FP-main -B/Users/lbjessie/Downloads/FP-main/cmake-build-debug
+  DESC = Running CMake to regenerate build system...
+  pool = console
+  restat = 1
+
+build rebuild_cache: phony CMakeFiles/rebuild_cache.util
+
+# =============================================================================
+# Target aliases.
+
+# =============================================================================
+# Folder targets.
+
+# =============================================================================
+
+#############################################
+# Folder: /Users/lbjessie/Downloads/FP-main/cmake-build-debug
+
+build all: phony FP_main
+
+# =============================================================================
+# Built-in targets
+
+
+#############################################
+# Re-run CMake if any of its inputs changed.
+
+build build.ninja: RERUN_CMAKE | ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /usr/local/lib/cmake/SFML/SFMLConfig.cmake /usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake /usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake /usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake /usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake
+  pool = console
+
+
+#############################################
+# A missing CMake input file is not an error.
+
+build ../CMakeLists.txt /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCXXInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeCommonLanguageInclude.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeGenericSystem.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeInitializeConfigs.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeLanguageInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInformation.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/CMakeSystemSpecificInitialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/CMakeCommonCompilerMacros.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Compiler/GNU.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-AppleClang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-C.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang-CXX.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Apple-Clang.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin-Initialize.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/Darwin.cmake /Applications/CLion.app/Contents/bin/cmake/mac/share/cmake-3.23/Modules/Platform/UnixPaths.cmake /usr/local/lib/cmake/SFML/SFMLConfig.cmake /usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake /usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake /usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake /usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake CMakeCache.txt CMakeFiles/3.23.2/CMakeCCompiler.cmake CMakeFiles/3.23.2/CMakeCXXCompiler.cmake CMakeFiles/3.23.2/CMakeSystem.cmake: phony
+
+
+#############################################
+# Clean all the built files.
+
+build clean: CLEAN
+
+
+#############################################
+# Print all primary targets available.
+
+build help: HELP
+
+
+#############################################
+# Make the all target the default.
+
+default all
