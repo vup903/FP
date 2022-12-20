@@ -17,15 +17,15 @@
 
 sf::Keyboard keyboard;
 sf::Mouse mouse; //336*352
-sf::RenderWindow window(sf::VideoMode(CELL_SIZE * MAP_WIDTH * SCREEN_RESIZE, (FONT_HEIGHT + CELL_SIZE * MAP_HEIGHT) * SCREEN_RESIZE), "Pac-Man", sf::Style::Close);
+sf::RenderWindow window(sf::VideoMode(CELL_SIZE * MAP_WIDTH * SCREEN_RESIZE, (FONT_HEIGHT + CELL_SIZE * MAP_HEIGHT) * SCREEN_RESIZE), "PacMan in Imperial Haren", sf::Style::Close);
 // 首頁宣告
 Background menuImage("Resources/Images/mainpage.png");
 Button startGame("Resources/Images/startGame.png", 36, 230);
-Button gameRule("Resources/Images/gameRule.png", 200, 230);
+Button gameRule("Resources/Images/gameRule.png", 196, 230);
 
 // 勝利畫面
 Background winImage("Resources/Images/win.png");
-Button reStart("Resources/Images/restart.png", 200, 300);
+Button reStart("Resources/Images/restart.png", 196, 242);
 
 // 失敗畫面
 Background loseImage("Resources/Images/lose.png");
@@ -58,7 +58,7 @@ int main()
 	int exp = 0;
 	// Is the game won?
 	bool game_won = 0;
-
+	int score;
 	// Used to make the game framerate-independent.
 	unsigned lag = 0;
 
@@ -119,41 +119,38 @@ int main()
 	while (1 == window.isOpen())
 	{
 		window.clear(sf::Color::Black);
-		SwitchUI(exp, type);
+		SwitchUI(score, type);
 		while (window.pollEvent(event))
-        {
-            if (event.type == event.Closed)
-                window.close();
-                
-            if (mouse.isButtonPressed(mouse.Left) and mouse.getPosition(window).x >= 72 and mouse.getPosition(window).y >= 460 and mouse.getPosition(window).x <= 272 and mouse.getPosition(window).y <= 536 and type == 1)
-            {
-                type = 2;
-				map = convert_sketch(map_sketch, ghost_positions, pacman);
-				ghost_manager.reset(level, ghost_positions);
-				pacman.reset();
-				lag =0;
+		{
+			if (event.type == event.Closed)
+				window.close();
+
+			if (mouse.isButtonPressed(mouse.Left) and mouse.getPosition(window).x >= 72 and mouse.getPosition(window).y >= 460 and mouse.getPosition(window).x <= 280 and mouse.getPosition(window).y <= 538 and type == 1)
+			{
+				lag = 0;
 				level = 0;
 				game_won = 0;
-            }
-            else if (mouse.isButtonPressed(mouse.Left) and mouse.getPosition(window).x >= 400 and mouse.getPosition(window).y >= 600 and mouse.getPosition(window).x <= 600 and mouse.getPosition(window).y <= 676 and (type == 3 or type == 4))
-            {
-                type = 1;
-            }
+				type = 2;
+			}
+			else if (mouse.isButtonPressed(mouse.Left) and mouse.getPosition(window).x >= 392 and mouse.getPosition(window).y >= 484 and mouse.getPosition(window).x <= 600 and mouse.getPosition(window).y <= 562 and (type == 3 or type == 4))
+			{
+				type = 1;
+			}
 
-            if (event.type == event.KeyPressed)
-            {
-                if (event.key.code == keyboard.Escape) //按ESC離開遊戲
-                {
-                    window.close();
-                }
-            }
-        }
+			if (event.type == event.KeyPressed)
+			{
+				if (event.key.code == keyboard.Escape) // 按ESC離開遊戲
+				{
+					window.close();
+				}
+			}
+		}
 		while (type == 2)
 		{
 			{
 				// Here we're calculating the lag.
 				unsigned delta_time = std::chrono::duration_cast<std::chrono::microseconds>(std::chrono::steady_clock::now() - previous_time).count();
-
+				score = 185;
 				lag += delta_time;
 
 				previous_time += std::chrono::microseconds(delta_time);
@@ -192,35 +189,23 @@ int main()
 								if (Cell::Pellet == cell) // And if at least one of them has a pellet.
 								{
 									game_won = 0; // The game is not yet won.
-
-									break;
+									score -= 1;
+								}
+								if (Cell::Energizer == cell)
+								{
+									game_won = 0;
+									score -= 10;
 								}
 							}
-
-							if (0 == game_won)
-							{
-								break;
-							}
 						}
-
 						if (1 == game_won)
 						{
 							pacman.set_animation_timer(0);
 						}
 					}
-					else if (1 == sf::Keyboard::isKeyPressed(sf::Keyboard::Enter)) // Restarting the game.
+					if (mouse.isButtonPressed(mouse.Left) and mouse.getPosition(window).x >= 72 and mouse.getPosition(window).y >= 460 and mouse.getPosition(window).x <= 280 and mouse.getPosition(window).y <= 538) // Restarting the game.
 					{
 						game_won = 0;
-
-						if (1 == pacman.get_dead())
-						{
-							level = 0;
-						}
-						else
-						{
-							// After each win we reduce the duration of attack waves and energizers.
-							level++;
-						}
 
 						map = convert_sketch(map_sketch, ghost_positions, pacman);
 
@@ -228,7 +213,7 @@ int main()
 
 						pacman.reset();
 					}
-
+					
 					// I don't think anything needs to be explained here.
 					if (FRAME_DURATION > lag)
 					{
@@ -240,7 +225,7 @@ int main()
 
 							ghost_manager.draw(window);
 
-							draw_text(0, 0, CELL_SIZE * MAP_HEIGHT, "Level: " + std::to_string(1 + level), window);
+							draw_text(0, 0, CELL_SIZE * MAP_HEIGHT, "Score: " + std::to_string(score), window);
 						}
 
 						pacman.draw(game_won, window);
@@ -256,14 +241,13 @@ int main()
 								type = 4;
 							}
 						}
-
-						
 					}
 				}
 			}
 			window.display();
 		}
-		if(type != 2){
+		if (type != 2)
+		{
 			window.display();
 		}
 	}
