@@ -1,0 +1,3 @@
+/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/CMakeFiles/WithNew.dir
+/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/CMakeFiles/rebuild_cache.dir
