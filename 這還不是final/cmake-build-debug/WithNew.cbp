@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="WithNew"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\usr\;CMake Files\..\..\..\..\usr\local\;CMake Files\..\..\..\..\usr\local\lib\;CMake Files\..\..\..\..\usr\local\lib\cmake\;CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="WithNew">
+				<Option output="/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/WithNew" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/lbjessie/Downloads/WithNewButton/Main"/>
+					<Add directory="/Users/lbjessie/Downloads/WithNewButton/Resources"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 WithNew"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="WithNew/fast">
+				<Option output="/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/WithNew" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/Users/lbjessie/Downloads/WithNewButton/Main"/>
+					<Add directory="/Users/lbjessie/Downloads/WithNewButton/Resources"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/bin/../include/c++/v1"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/lib/clang/13.0.0/include"/>
+					<Add directory="/Library/Developer/CommandLineTools/usr/include"/>
+					<Add directory="/System/Library/Frameworks"/>
+					<Add directory="/Library/Frameworks"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 WithNew/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lbjessie/Downloads/WithNewButton/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/ConvertSketch.cpp">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/DrawMap.cpp">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/Ghost.cpp">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/GhostManager.cpp">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/Headers/Background.hpp">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/Headers/Button.cpp">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/Headers/Button.h">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/Headers/ConvertSketch.h">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/Headers/DrawMap.h">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/Headers/Ghost.h">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/Headers/GhostManager.h">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/Headers/Global.h">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/Headers/MapCollision.h">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/Headers/Pacman.h">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/Headers/ScoreBoard.hpp">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/MapCollision.cpp">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/Pacman.cpp">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/Main/main.cpp">
+			<Option target="WithNew"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/../../../../usr/local/lib/cmake/SFML/SFMLConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/../../../../usr/local/lib/cmake/SFML/SFMLConfigDependencies.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/../../../../usr/local/lib/cmake/SFML/SFMLConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/../../../../usr/local/lib/cmake/SFML/SFMLSharedTargets-release.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
+		</Unit>
+		<Unit filename="/Users/lbjessie/Downloads/WithNewButton/../../../../usr/local/lib/cmake/SFML/SFMLSharedTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\usr\local\lib\cmake\SFML\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>
