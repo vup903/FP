@@ -19,7 +19,7 @@ public:
 
 ScoreBoard::ScoreBoard()
 {
-    font.loadFromFile("/Users/lbjessie/Desktop/大三上/程式設計/demo/54938565040.ttf");
+    font.loadFromFile("54938565040.ttf");
     text.setFont(font);
     text.setCharacterSize(10);
     text.setStyle(Text::Bold);
